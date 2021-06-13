@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body { padding-top: 50px; }
+  </style>
+  <script>
+    function search() {
+      var xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+      var address = document.getElementById("search-address").value;
+      var delivery_area = document.getElementById("delivery-area")
+      xhr.addEventListener("readystatechange", function() {
+        if(this.readyState === 4) {
+          var result = JSON.parse(this.responseText)
+          delivery_area.innerHTML = result.Name
+        }
+      });
+
+      xhr.open("GET", "http://localhost:3000/delivery_area?address=" + address);
+      xhr.setRequestHeader("co", "");
+      if(!!address){
+        xhr.send();
+      } else {
+        window.alert("Empty search!!")
+      }
+      
+    }
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <div class="input-group mb-3">
+        <input id="search-address" type="text" class="form-control" placeholder="Address" aria-label="Address" aria-describedby="basic-addon2">
+        <span class="btn btn-primary" id="basic-addon2" onclick="search()">Search</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Delivery area</h5>
+        <p id="delivery-area" class="card-text"></p>        
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
