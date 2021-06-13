@@ -1,8 +1,14 @@
-Set Up
+Assignment Full Stack | Honest Food Company
+
+Setting up the codebase:
+1. clone the repository
+git clone https://github.com/rahulkookal/geo-search.git
+
+2. Install dependencies
 npm install
 
-Start server
+3. Start server
 npm start
 
-browse
+4. browse
 http://localhost:3000
