@@ -338,19 +338,7 @@
       ]
   },
   "test": {
-      "username": "root",
-      "password": null,
-      "database": "database_test",
-      "host": "127.0.0.1",
-      "dialect": "mysql",
-      "news_api_key": "b36f50d8c84b49308dd3ee8da737f3da"
   },
   "production": {
-      "username": "root",
-      "password": null,
-      "database": "database_production",
-      "host": "127.0.0.1",
-      "dialect": "mysql",
-      "news_api_key": "b36f50d8c84b49308dd3ee8da737f3da"
   }
 }
