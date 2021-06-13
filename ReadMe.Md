@@ -1,14 +1,14 @@
-Assignment Full Stack | Honest Food Company
+_**Assignment Full Stack | Honest Food Company**_
 
 Setting up the codebase:
 1. clone the repository
-git clone https://github.com/rahulkookal/geo-search.git
+**git clone https://github.com/rahulkookal/geo-search.git**
 
 2. Install dependencies
-npm install
+**npm install**
 
 3. Start server
-npm start
+**npm start**
 
 4. browse
 http://localhost:3000
